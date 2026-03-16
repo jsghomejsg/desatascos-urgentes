@@ -3,92 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios de Desatascos Profesionales | Contacto Directo</title>
+    <title>Servicios de Desatascos Profesionales | Atención Especializada</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --main-blue: #003366; --accent-blue: #00509d; --green: #25d366; --gray: #f8f9fa; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #333; background: #fff; line-height: 1.5; }
-        
-        header { background: white; padding: 25px 5%; display: flex; justify-content: center; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        .logo-text { font-size: 1.6em; font-weight: 800; color: var(--main-blue); text-align: center; line-height: 1.1; }
-        .logo-text span { color: var(--accent-blue); display: block; font-size: 0.6em; letter-spacing: 2px; text-transform: uppercase; margin-top: 5px; }
-
-        .hero { 
-            background: linear-gradient(rgba(0, 51, 102, 0.75), rgba(0, 51, 102, 0.75)), 
-                        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; background-position: center;
-            color: white; padding: 120px 5%; text-align: center;
+        :root { 
+            --main-blue: #003366; 
+            --accent-blue: #00509d; 
+            --green: #25d366; 
+            --gray: #f8f9fa; 
+            --dark: #001a33;
         }
-        .hero h1 { font-size: 2.8em; margin: 0; line-height: 1.2; text-transform: uppercase; }
-        .hero p { font-size: 1.2em; margin: 25px auto 40px; max-width: 600px; }
+        
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            color: #333; 
+            background: #fff; 
+            line-height: 1.6; 
+        }
+        
+        /* HEADER */
+        header { 
+            background: white; 
+            padding: 20px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+        }
+        .logo-text { 
+            font-size: 1.4em; 
+            font-weight: 800; 
+            color: var(--main-blue); 
+            line-height: 1; 
+            text-decoration: none;
+        }
+        .logo-text span { 
+            color: var(--accent-blue); 
+            display: block; 
+            font-size: 0.6em; 
+            letter-spacing: 2px; 
+            text-transform: uppercase; 
+            margin-top: 5px;
+        }
 
+        /* BOTÓN INSTALAR (Para tenerlo como App) */
+        .btn-install {
+            background: var(--main-blue);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.8em;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), 
+                        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover; 
+            background-position: center;
+            color: white; 
+            padding: 100px 5%; 
+            text-align: center;
+        }
+        .hero h1 { font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
+        .hero p { font-size: 1.2em; margin: 20px auto 40px; max-width: 700px; opacity: 0.9; }
+
+        /* BOTÓN WHATSAPP (Con tu Script de Control) */
         .btn-main { 
-            background: var(--green); color: white; text-decoration: none; 
-            font-size: 1.4em; font-weight: bold; padding: 20px 40px; 
-            border-radius: 50px; display: inline-flex; align-items: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.3); transition: 0.3s;
+            background: var(--green); 
+            color: white; 
+            text-decoration: none; 
+            font-size: 1.3em; 
+            font-weight: bold; 
+            padding: 22px 45px; 
+            border-radius: 50px; 
+            display: inline-flex; 
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         .btn-main:hover { transform: scale(1.05); background: #1ebe57; }
-        .btn-main i { margin-right: 15px; font-size: 1.3em; }
+        .btn-main i { margin-right: 15px; font-size: 1.5em; }
 
-        .section-title { text-align: center; padding: 60px 0 40px; color: var(--main-blue); font-size: 2em; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 0 5% 80px; }
-        .card { background: var(--gray); padding: 35px; border-radius: 12px; text-align: center; border: 1px solid #eee; }
-        .card i { font-size: 2.5em; color: var(--accent-blue); margin-bottom: 20px; }
-        .card h3 { margin: 0 0 10px; color: var(--main-blue); }
-        .card p { font-size: 0.95em; color: #666; margin: 0; }
+        /* SERVICIOS */
+        .section-title { text-align: center; padding: 60px 5% 30px; color: var(--main-blue); font-size: 2.2em; }
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 25px; 
+            padding: 0 5% 80px; 
+        }
+        .card { 
+            background: var(--gray); 
+            padding: 40px; 
+            border-radius: 15px; 
+            text-align: center; 
+            border: 1px solid #eee; 
+            transition: 0.3s;
+        }
+        .card:hover { background: white; border-color: var(--accent-blue); box-shadow: 0 15px 30px rgba(0,0,0,0.05); }
+        .card i { font-size: 3em; color: var(--accent-blue); margin-bottom: 25px; }
+        .card h3 { margin: 0 0 15px; color: var(--main-blue); font-size: 1.5em; }
+        .card p { color: #666; font-size: 1em; }
 
-        footer { background: #001a33; color: #ccc; padding: 50px 5% 30px; text-align: center; font-size: 0.9em; }
-        .footer-line { border-top: 1px solid #1a3a5a; margin-top: 30px; padding-top: 20px; color: #666; }
+        /* FOOTER */
+        footer { background: var(--dark); color: white; padding: 60px 5% 30px; text-align: center; }
+        .footer-content { max-width: 800px; margin: 0 auto; }
+        .footer-content h3 { font-size: 1.8em; margin-bottom: 20px; }
+        .footer-line { 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            font-size: 0.8em; 
+            color: #888; 
+        }
 
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .btn-main { font-size: 1.2em; width: 90%; box-sizing: border-box; justify-content: center; }
+            .hero h1 { font-size: 2.2em; }
+            .btn-main { width: 100%; padding: 20px 10px; font-size: 1.1em; box-sizing: border-box; }
+            header { flex-direction: column; gap: 15px; padding: 15px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-text">
-            SERVICIOS DE DESATASCOS
-            <span>ATENCIÓN PROFESIONAL</span>
-        </div>
+        <a href="#" class="logo-text">
+            DESATASCOS PROFESIONALES
+            <span>CENTRAL DE ASISTENCIA TÉCNICA</span>
+        </a>
+        <button class="btn-install" onclick="alert('Para instalar: Pulsa el botón Compartir y selecciona Añadir a pantalla de inicio')">
+            <i class="fas fa-mobile-alt"></i> INSTALAR APP
+        </button>
     </header>
 
     <section class="hero">
-        <h1>Soluciones Profesionales de Desatascos</h1>
-        <p>Especialistas en la red de saneamiento. Disponemos de equipos preparados para resolver cualquier incidencia de forma rápida y eficaz.</p>
+        <h1>Soluciones en Redes de Saneamiento</h1>
+        <p>Expertos en la resolución de incidencias en tuberías, arquetas y sistemas de desagüe. Disponemos de la tecnología adecuada para cada caso.</p>
         
-        <a href="https://wa.me/34611801528?text=Hola,%20solicito%20información%20y%20presupuesto%20para%20un%20servicio%20de%20desatasco." class="btn-main">
+        <a href="https://script.google.com/macros/s/AKfycbwavWp42XEtnqG70_sPhpA3Rd93G_8oqrZTkhYzTsqnIFhMp-zKy01u2JWgEBoB4V_q/exec" class="btn-main">
             <i class="fab fa-whatsapp"></i> CONSULTAR DISPONIBILIDAD
         </a>
     </section>
 
-    <h2 class="section-title">Nuestros Servicios</h2>
+    <h2 class="section-title">Especialidades Técnicas</h2>
     <div class="services-grid">
         <div class="card">
-            <i class="fas fa-home"></i>
-            <h3>Atascos Domésticos</h3>
-            <p>Limpieza y mantenimiento de tuberías, fregaderos y sanitarios con equipos especializados.</p>
+            <i class="fas fa-faucet"></i>
+            <h3>Desatascos de Tuberías</h3>
+            <p>Limpieza correctiva de desagües y conductos internos para garantizar el flujo correcto.</p>
         </div>
         <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Redes Generales</h3>
-            <p>Intervención en arquetas, bajantes y redes de alcantarillado para particulares y comunidades.</p>
+            <i class="fas fa-layer-group"></i>
+            <h3>Mantenimiento de Arquetas</h3>
+            <p>Localización y limpieza profunda de arquetas generales y registros de saneamiento.</p>
         </div>
         <div class="card">
-            <i class="fas fa-truck"></i>
-            <h3>Equipos de Presión</h3>
-            <p>Maquinaria preparada para la limpieza profunda y el vaciado de instalaciones complejas.</p>
+            <i class="fas fa-truck-pickup"></i>
+            <h3>Sistemas de Presión</h3>
+            <p>Uso de equipos técnicos para la eliminación de sedimentos y residuos complejos en la red.</p>
         </div>
     </div>
 
     <footer>
-        <h3 style="color: white;">Atención y Consultas</h3>
-        <p>Contacte a través de WhatsApp para recibir atención técnica inmediata y valorar su caso sin compromiso.</p>
-        <div class="footer-line">
-            &copy; 2026 Servicio Técnico de Desatascos | Web de contacto profesional.
+        <div class="footer-content">
+            <h3>¿Necesita valoración técnica?</h3>
+            <p>Contacte ahora a través de nuestra plataforma de WhatsApp para consultar disponibilidad y recibir atención profesional.</p>
+            <div class="footer-line">
+                &copy; 2026 Servicio Profesional de Desatascos | Web de Gestión de Leads.
+            </div>
         </div>
     </footer>
 
