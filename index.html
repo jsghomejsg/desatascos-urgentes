@@ -3,194 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desatascos Urgentes | Servicio Profesional 24h</title>
+    
+    <title>Desatascos Urgentes 24h Madrid | Empresa de Pocería Especializada</title>
+    <meta name="description" content="Servicio profesional de desatascos urgentes 24h en Madrid. Expertos en limpieza de tuberías, arquetas y bajantes con equipo de alta presión.">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { 
-            --main-blue: #003366; 
-            --accent-blue: #00509d; 
-            --green: #25d366; 
-            --gray: #f8f9fa; 
-            --dark: #001a33;
-        }
-        
-        body { 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            margin: 0; 
-            color: #333; 
-            background: #fff; 
-            line-height: 1.6; 
-        }
-        
-        header { 
-            background: white; 
-            padding: 15px 5%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-        }
-        
-        .logo-text { 
-            font-size: 1.2em; 
-            font-weight: 800; 
-            color: var(--main-blue); 
-            line-height: 1; 
-            text-decoration: none;
-        }
-        
-        .logo-text span { 
-            color: var(--accent-blue); 
-            display: block; 
-            font-size: 0.6em; 
-            letter-spacing: 1px; 
-            text-transform: uppercase; 
-            margin-top: 5px;
-        }
-
-        .btn-download {
-            background: var(--main-blue);
-            color: white;
-            border: none;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 0.85em;
-            font-weight: 600;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            transition: 0.3s;
-        }
-
-        .btn-download:hover {
-            background: var(--accent-blue);
-        }
-
-        .hero { 
-            background: linear-gradient(rgba(0, 51, 102, 0.85), rgba(0, 51, 102, 0.85)), 
-                        url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1350&q=80');
-            background-size: cover; 
-            background-position: center;
-            color: white; 
-            padding: 80px 5%; 
-            text-align: center;
-        }
-        
-        .hero h1 { font-size: 2.5em; margin: 0; text-transform: uppercase; letter-spacing: -1px; }
-        .hero p { font-size: 1.2em; margin: 20px auto 40px; max-width: 600px; opacity: 0.9; }
-
-        .btn-whatsapp { 
-            background: var(--green); 
-            color: white; 
-            text-decoration: none; 
-            font-size: 1.3em; 
-            font-weight: bold; 
-            padding: 22px 40px; 
-            border-radius: 50px; 
-            display: inline-flex; 
-            align-items: center;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); 
-            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        
-        .btn-whatsapp:hover { transform: scale(1.05); background: #1ebe57; }
-        .btn-whatsapp i { margin-right: 15px; font-size: 1.4em; }
-
-        .services { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 20px; 
-            padding: 60px 5%; 
-            background: var(--gray);
-        }
-        
-        .card { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 15px; 
-            text-align: center; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        }
-        
-        .card i { font-size: 2.5em; color: var(--accent-blue); margin-bottom: 20px; }
-        .card h3 { margin: 0 0 10px; color: var(--main-blue); }
-
-        footer { 
-            background: var(--dark); 
-            color: rgba(255,255,255,0.7); 
-            padding: 40px 5%; 
-            text-align: center; 
-            font-size: 0.9em; 
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8em; }
-            header { padding: 10px 5%; }
-            .btn-download span { display: none; }
-        }
+        :root { --main: #003366; --accent: #00509d; --green: #25d366; --gray: #f8f9fa; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; color: #333; line-height: 1.6; }
+        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 1.2em; font-weight: 800; color: var(--main); text-decoration: none; text-transform: uppercase; }
+        .btn-install { background: var(--main); color: white; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer; display: flex; align-items: center; gap: 8px; font-size: 0.8em; }
+        .hero { background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.8)), url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1350&q=80'); background-size: cover; color: white; padding: 80px 5%; text-align: center; }
+        .btn-wa { background: var(--green); color: white; text-decoration: none; font-size: 1.2em; font-weight: bold; padding: 20px 40px; border-radius: 50px; display: inline-flex; align-items: center; cursor: pointer; border: none; box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); margin-top: 20px; }
+        .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; padding: 50px 5%; background: var(--gray); }
+        .card { background: white; padding: 30px; border-radius: 15px; text-align: center; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        footer { background: #001a33; color: white; padding: 30px; text-align: center; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-text">
-            DESATASCOS PROFESIONALES
-            <span>SERVICIO TÉCNICO ESPECIALIZADO</span>
-        </div>
-        <button class="btn-download" onclick="alert('Instalación: En iPhone pulsa el icono de compartir y selecciona \'Añadir a pantalla de inicio\'. En Android abre el menú del navegador y selecciona \'Instalar aplicación\'.')">
-            <i class="fas fa-mobile-alt"></i> <span>INSTALAR APP</span>
+        <div class="logo">Madrid<span>Desatascos</span></div>
+        <button class="btn-install" onclick="alert('Instalación: Pulsa compartir y \'Añadir a pantalla de inicio\'')">
+            <i class="fas fa-mobile-alt"></i> INSTALAR APP
         </button>
     </header>
 
     <section class="hero">
-        <h1>Expertos en Desatascos Urgentes</h1>
-        <p>Soluciones inmediatas para tuberías, arquetas y bajantes. Equipo profesional disponible ahora en su zona.</p>
-        
-        <button onclick="enviarLead()" class="btn-whatsapp">
+        <h1>Servicio Profesional de Desatascos</h1>
+        <p>Atención técnica especializada en Madrid. Resolvemos urgencias en redes de saneamiento.</p>
+        <button onclick="enviarLead()" class="btn-wa">
             <i class="fab fa-whatsapp"></i> CONSULTAR DISPONIBILIDAD
         </button>
     </section>
 
     <div class="services">
-        <div class="card">
-            <i class="fas fa-tools"></i>
-            <h3>Desatascos</h3>
-            <p>Limpieza profesional de todo tipo de tuberías y desagües domésticos.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-search"></i>
-            <h3>Inspección</h3>
-            <p>Localización de averías y arquetas ocultas con tecnología avanzada.</p>
-        </div>
-        <div class="card">
-            <i class="fas fa-clock"></i>
-            <h3>Servicio 24h</h3>
-            <p>Atención prioritaria para avisos de urgencia en redes de saneamiento.</p>
-        </div>
+        <div class="card"><h3>Tuberías</h3><p>Limpieza profesional y desatascos de fregaderos y baños.</p></div>
+        <div class="card"><h3>Arquetas</h3><p>Localización y limpieza de arquetas con equipo de presión.</p></div>
+        <div class="card"><h3>Bajantes</h3><p>Mantenimiento preventivo para comunidades de vecinos.</p></div>
     </div>
 
     <footer>
-        &copy; 2026 Servicio Profesional de Desatascos | Atención Directa por WhatsApp
+        &copy; 2026 Central de Desatascos Urgentes Madrid
     </footer>
 
     <script>
     function enviarLead() {
-        // Enlace de seguimiento de Google
+        // Tu URL de seguimiento (Se mantiene igual)
         const trackingUrl = "https://script.google.com/macros/s/AKfycbz9A1Q5dw-hgoymPq0KWltlnJrFi6NjNj-QJeYlRYmVoRjGFSQs7wnViewRncv2_UbA/exec";
         
-        // WhatsApp de Jonathan López
-        const whatsappUrl = "https://wa.me/34622588691?text=Hola,%20necesito%20presupuesto%20para%20un%20desatasco%20urgente.";
+        // WhatsApp de Jonathan (Él recibe el trabajo, pero tú no usas su nombre en la web)
+        const whatsappUrl = "https://wa.me/34622588691?text=Hola,%20he%20visto%20vuestra%20web%20de%20desatascos%20y%20necesito%20presupuesto.";
 
-        // 1. Envía el email en segundo plano (Invisible)
         fetch(trackingUrl, { mode: 'no-cors' });
-
-        // 2. Salta a WhatsApp al instante
         window.location.href = whatsappUrl;
     }
     </script>
