@@ -3,105 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desatascos Urgentes 24h - Camión Cuba y Tuberías</title>
+    <title>Desatascos Urgentes 24h - Servicio Técnico Profesional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         :root { --blue: #0a2351; --red: #cc0000; --green: #25d366; }
         body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; background: #f4f7f6; }
         
-        /* HEADER */
         header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--blue); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.5em; font-weight: 900; color: var(--blue); text-transform: uppercase; }
+        .logo { font-size: 1.4em; font-weight: 900; color: var(--blue); text-transform: uppercase; }
         .emergency-contact { color: var(--red); font-weight: bold; font-size: 1.1em; }
 
-        /* HERO SECTION */
         .hero { 
-            background: linear-gradient(rgba(10, 35, 81, 0.8), rgba(10, 35, 81, 0.8)), 
+            background: linear-gradient(rgba(10, 35, 81, 0.85), rgba(10, 35, 81, 0.85)), 
                         url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover; background-position: center;
             color: white; padding: 80px 5%; text-align: center;
         }
-        .hero h1 { font-size: 3em; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
-        .hero p { font-size: 1.3em; margin: 20px 0 40px; opacity: 0.9; }
+        .hero h1 { font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
+        .hero p { font-size: 1.2em; margin: 20px 0 40px; opacity: 0.9; }
 
-        /* BOTÓN WHATSAPP PULSANTE */
         .btn-ws { 
             display: inline-flex; align-items: center; background: var(--green); color: white; 
-            text-decoration: none; font-size: 1.8em; font-weight: bold; padding: 25px 50px; 
+            text-decoration: none; font-size: 1.6em; font-weight: bold; padding: 22px 45px; 
             border-radius: 50px; box-shadow: 0 10px 30px rgba(37,211,102,0.5);
             transition: 0.3s; animation: pulse 2s infinite;
         }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
         .btn-ws i { margin-right: 15px; font-size: 1.2em; }
 
-        /* SERVICIOS */
         .services { padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
-        .service-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .service-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
         .service-card i { font-size: 3em; color: var(--blue); margin-bottom: 20px; }
         .service-card h3 { margin: 10px 0; color: var(--blue); }
 
-        /* GARANTÍA */
-        .trust { background: var(--blue); color: white; padding: 40px 5%; text-align: center; }
-        .trust-grid { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-        .trust-item { font-weight: bold; font-size: 1.1em; }
-        .trust-item i { color: #ffcc00; margin-right: 10px; }
+        .trust { background: var(--blue); color: white; padding: 30px 5%; text-align: center; }
+        .trust-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
+        .trust-item { font-weight: bold; font-size: 1em; }
+        .trust-item i { color: #ffcc00; margin-right: 8px; }
 
-        footer { background: #111; color: #777; padding: 30px 5%; text-align: center; font-size: 0.9em; }
+        footer { background: #111; color: #aaa; padding: 40px 5%; text-align: center; font-size: 0.9em; }
+        .footer-line { border-top: 1px solid #333; margin: 20px 0; padding-top: 20px; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2em; }
-            .btn-ws { font-size: 1.4em; padding: 20px 30px; width: 90%; box-sizing: border-box; }
+            .hero h1 { font-size: 1.8em; }
+            .btn-ws { font-size: 1.3em; padding: 18px 25px; width: 95%; box-sizing: border-box; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">JSG Desatascos</div>
+        <div class="logo">Servicio de Desatascos</div>
         <div class="emergency-contact"><i class="fas fa-clock"></i> 24 HORAS</div>
     </header>
 
     <section class="hero">
-        <div class="badge" style="background:var(--red); display:inline-block; padding:5px 15px; border-radius:5px; margin-bottom:20px; font-weight:bold;">🚛 CAMIÓN CUBA INMEDIATO</div>
-        <h1>¿Inundación o Atasco?</h1>
-        <p>Expertos en desatascos de arquetas, fosas sépticas y tuberías domésticas.<br>Llegamos en menos de 40 minutos.</p>
+        <div style="background:var(--red); display:inline-block; padding:5px 15px; border-radius:5px; margin-bottom:20px; font-weight:bold; font-size:0.9em;">🚛 UNIDAD MÓVIL DISPONIBLE</div>
+        <h1>¿Necesita un Desatasco Urgente?</h1>
+        <p>Especialistas en arquetas, bajantes, fosas sépticas y tuberías.<br>Atención inmediata en menos de 40 minutos.</p>
         
-        <a href="https://wa.me/34611801528?text=URGENTE:%20Necesito%20asistencia%20por%20un%20atasco/inundación." class="btn-ws">
-            <i class="fab fa-whatsapp"></i> SOLICITAR AYUDA
+        <a href="https://wa.me/34611801528?text=Hola,%20necesito%20asistencia%20urgente%20para%20un%20desatasco." class="btn-ws">
+            <i class="fab fa-whatsapp"></i> CONTACTAR POR WHATSAPP
         </a>
-        <p style="margin-top:20px; font-size:1em; font-weight:bold;">¡Presupuesto gratuito por WhatsApp!</p>
+        <p style="margin-top:20px; font-size:0.9em; font-weight:bold; color: #ffcc00;">Atención directa · Sin intermediarios telefónicos</p>
     </section>
 
     <div class="trust">
         <div class="trust-grid">
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Sin Intermediarios</div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i> Camión Cuba Propio</div>
             <div class="trust-item"><i class="fas fa-check-circle"></i> Precio Cerrado</div>
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Camión Propio</div>
+            <div class="trust-item"><i class="fas fa-check-circle"></i> Garantía por escrito</div>
         </div>
     </div>
 
     <section class="services">
         <div class="service-card">
-            <i class="fas fa-sink"></i>
-            <h3>Desatascos Domésticos</h3>
-            <p>Fregaderos, baños y duchas. Limpieza profesional sin romper nada.</p>
+            <i class="fas fa-faucet"></i>
+            <h3>Atascos Domésticos</h3>
+            <p>Fregaderos, sanitarios y bajantes. Soluciones rápidas y limpias sin obras.</p>
         </div>
         <div class="service-card">
-            <i class="fas fa-truck-monster"></i>
-            <h3>Camión Cuba</h3>
-            <p>Vaciado de fosas sépticas y limpieza de alcantarillado con alta presión.</p>
+            <i class="fas fa-truck-pickup"></i>
+            <h3>Vaciado y Limpieza</h3>
+            <p>Mantenimiento y vaciado de fosas sépticas, pozos y limpieza de alcantarillado.</p>
         </div>
         <div class="service-card">
-            <i class="fas fa-search"></i>
-            <h3>Cámara de TV</h3>
-            <p>Localizamos la rotura o el atasco exacto sin necesidad de obras.</p>
+            <i class="fas fa-video"></i>
+            <h3>Inspección con Cámara</h3>
+            <p>Localización exacta de averías y atascos complejos mediante cámaras de alta definición.</p>
         </div>
     </section>
 
     <footer>
-        <p><strong>jsghomejsg - Servicios Profesionales de Desatascos</strong><br>
-        Atención Urgente en toda la provincia | Teléfono: 611 801 528<br>
-        &copy; 2026 Todos los derechos reservados.</p>
+        <p><strong>Central de Servicios Técnicos de Desatascos</strong><br>
+        Equipos de guardia operativos 24h / 365 días al año.<br>
+        Atención Profesional Inmediata.</p>
+        <div class="footer-line">
+            &copy; 2026 Todos los derechos reservados.
+        </div>
     </footer>
 
 </body>
