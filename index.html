@@ -3,103 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desatascos Urgentes 24h - Servicio Técnico Profesional</title>
+    <title>Desatascos Urgentes 24h | Servicio Profesional de Pocería</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --blue: #0a2351; --red: #cc0000; --green: #25d366; }
-        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; color: #333; line-height: 1.6; background: #f4f7f6; }
+        :root { --main-blue: #003366; --accent-blue: #00509d; --red: #d90429; --green: #25d366; --gray: #f8f9fa; }
+        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; color: #333; background: #fff; line-height: 1.5; }
         
-        header { background: white; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--blue); position: sticky; top: 0; z-index: 1000; }
-        .logo { font-size: 1.4em; font-weight: 900; color: var(--blue); text-transform: uppercase; }
-        .emergency-contact { color: var(--red); font-weight: bold; font-size: 1.1em; }
+        /* BARRA SUPERIOR */
+        .top-bar { background: var(--main-blue); color: white; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 0.85em; font-weight: bold; }
+        
+        /* HEADER */
+        header { background: white; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .logo-text { font-size: 1.6em; font-weight: 800; color: var(--main-blue); line-height: 1; }
+        .logo-text span { color: var(--accent-blue); display: block; font-size: 0.6em; letter-spacing: 2px; }
+        .phone-link { background: var(--red); color: white; text-decoration: none; padding: 12px 20px; border-radius: 5px; font-weight: bold; display: flex; align-items: center; }
+        .phone-link i { margin-right: 8px; }
 
+        /* HERO PROFESIONAL */
         .hero { 
-            background: linear-gradient(rgba(10, 35, 81, 0.85), rgba(10, 35, 81, 0.85)), 
-                        url('https://images.unsplash.com/photo-1581094288338-2314dddb7bc3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover; background-position: center;
-            color: white; padding: 80px 5%; text-align: center;
+            color: white; padding: 100px 5%; text-align: left;
         }
-        .hero h1 { font-size: 2.8em; margin: 0; text-transform: uppercase; letter-spacing: 1px; }
-        .hero p { font-size: 1.2em; margin: 20px 0 40px; opacity: 0.9; }
+        .hero-content { max-width: 700px; }
+        .hero h1 { font-size: 3.2em; margin: 0; line-height: 1.1; text-transform: uppercase; }
+        .hero p { font-size: 1.4em; margin: 25px 0 40px; }
 
-        .btn-ws { 
-            display: inline-flex; align-items: center; background: var(--green); color: white; 
-            text-decoration: none; font-size: 1.6em; font-weight: bold; padding: 22px 45px; 
-            border-radius: 50px; box-shadow: 0 10px 30px rgba(37,211,102,0.5);
-            transition: 0.3s; animation: pulse 2s infinite;
+        /* BOTÓN DE ACCIÓN PRINCIPAL */
+        .btn-main { 
+            background: var(--green); color: white; text-decoration: none; 
+            font-size: 1.5em; font-weight: bold; padding: 20px 40px; 
+            border-radius: 8px; display: inline-flex; align-items: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: 0.3s;
         }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.03); } 100% { transform: scale(1); } }
-        .btn-ws i { margin-right: 15px; font-size: 1.2em; }
+        .btn-main:hover { transform: translateY(-3px); background: #1ebe57; }
+        .btn-main i { margin-right: 15px; font-size: 1.3em; }
 
-        .services { padding: 60px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; text-align: center; }
-        .service-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; }
-        .service-card i { font-size: 3em; color: var(--blue); margin-bottom: 20px; }
-        .service-card h3 { margin: 10px 0; color: var(--blue); }
+        /* SERVICIOS ESTILO "VALOR ALTO" */
+        .section-title { text-align: center; padding: 60px 0 20px; color: var(--main-blue); font-size: 2.2em; text-transform: uppercase; }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5% 60px; }
+        .card { border: 1px solid #eee; border-radius: 10px; overflow: hidden; background: var(--gray); transition: 0.3s; }
+        .card:hover { box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .card-body { padding: 25px; }
+        .card-body h3 { color: var(--main-blue); margin-top: 0; }
+        .card-body p { color: #666; font-size: 0.95em; }
 
-        .trust { background: var(--blue); color: white; padding: 30px 5%; text-align: center; }
-        .trust-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; }
-        .trust-item { font-weight: bold; font-size: 1em; }
-        .trust-item i { color: #ffcc00; margin-right: 8px; }
+        /* BARRA DE CONFIANZA */
+        .trust-bar { background: var(--main-blue); color: white; padding: 40px 5%; text-align: center; }
+        .trust-items { display: flex; justify-content: space-around; flex-wrap: wrap; gap: 20px; }
+        .trust-item { font-size: 1.1em; font-weight: bold; }
+        .trust-item i { color: #ffcc00; margin-bottom: 10px; display: block; font-size: 2em; }
 
-        footer { background: #111; color: #aaa; padding: 40px 5%; text-align: center; font-size: 0.9em; }
-        .footer-line { border-top: 1px solid #333; margin: 20px 0; padding-top: 20px; }
+        footer { background: #001a33; color: #ccc; padding: 60px 5% 20px; font-size: 0.9em; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 50px; }
+        .legal-notice { border-top: 1px solid #333; margin-top: 40px; padding-top: 20px; text-align: center; font-size: 0.8em; }
 
+        /* MÓVIL */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 1.8em; }
-            .btn-ws { font-size: 1.3em; padding: 18px 25px; width: 95%; box-sizing: border-box; }
+            .hero h1 { font-size: 2.2em; }
+            .hero p { font-size: 1.1em; }
+            .footer-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; }
         }
     </style>
 </head>
 <body>
 
+    <div class="top-bar">
+        <span><i class="fas fa-check-circle"></i> SERVICIO TÉCNICO AUTORIZADO</span>
+        <span><i class="fas fa-clock"></i> DISPONIBILIDAD 24 HORAS</span>
+    </div>
+
     <header>
-        <div class="logo">Servicio de Desatascos</div>
-        <div class="emergency-contact"><i class="fas fa-clock"></i> 24 HORAS</div>
+        <div class="logo-text">
+            DESATASCOS PROFESIONALES
+            <span>SERVICIOS DE POCERÍA Y ALCANTARILLADO</span>
+        </div>
+        <a href="tel:611801528" class="phone-link">
+            <i class="fas fa-phone-alt"></i> 611 801 528
+        </a>
     </header>
 
     <section class="hero">
-        <div style="background:var(--red); display:inline-block; padding:5px 15px; border-radius:5px; margin-bottom:20px; font-weight:bold; font-size:0.9em;">🚛 UNIDAD MÓVIL DISPONIBLE</div>
-        <h1>¿Necesita un Desatasco Urgente?</h1>
-        <p>Especialistas en arquetas, bajantes, fosas sépticas y tuberías.<br>Atención inmediata en menos de 40 minutos.</p>
-        
-        <a href="https://wa.me/34611801528?text=Hola,%20necesito%20asistencia%20urgente%20para%20un%20desatasco." class="btn-ws">
-            <i class="fab fa-whatsapp"></i> CONTACTAR POR WHATSAPP
-        </a>
-        <p style="margin-top:20px; font-size:0.9em; font-weight:bold; color: #ffcc00;">Atención directa · Sin intermediarios telefónicos</p>
+        <div class="hero-content">
+            <h1>Servicios de Desatascos y Camión Cuba</h1>
+            <p>Intervenciones urgentes para particulares, empresas y comunidades de propietarios. Soluciones definitivas con tecnología avanzada.</p>
+            
+            <a href="https://wa.me/34611801528?text=Consulta%20urgente%20desde%20la%20web.%20Necesito%20presupuesto." class="btn-main">
+                <i class="fab fa-whatsapp"></i> SOLICITAR TÉCNICO AHORA
+            </a>
+        </div>
     </section>
 
-    <div class="trust">
-        <div class="trust-grid">
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Camión Cuba Propio</div>
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Precio Cerrado</div>
-            <div class="trust-item"><i class="fas fa-check-circle"></i> Garantía por escrito</div>
+    <div class="trust-bar">
+        <div class="trust-items">
+            <div class="trust-item"><i class="fas fa-award"></i> Garantía por Escrito</div>
+            <div class="trust-item"><i class="fas fa-truck-pickup"></i> Camión Cuba Propio</div>
+            <div class="trust-item"><i class="fas fa-user-tie"></i> Técnicos Especializados</div>
+            <div class="trust-item"><i class="fas fa-shield-alt"></i> Empresa Asegurada</div>
         </div>
     </div>
 
-    <section class="services">
-        <div class="service-card">
-            <i class="fas fa-faucet"></i>
-            <h3>Atascos Domésticos</h3>
-            <p>Fregaderos, sanitarios y bajantes. Soluciones rápidas y limpias sin obras.</p>
+    <h2 class="section-title">Nuestras Especialidades</h2>
+    <div class="services-grid">
+        <div class="card">
+            <div class="card-body">
+                <i class="fas fa-truck-monster" style="font-size: 2em; color: var(--accent-blue);"></i>
+                <h3>Gestión de Camión Cuba</h3>
+                <p>Vaciado de fosas sépticas, pozos negros y limpieza de grandes canalizaciones mediante equipos de alta presión.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <i class="fas fa-truck-pickup"></i>
-            <h3>Vaciado y Limpieza</h3>
-            <p>Mantenimiento y vaciado de fosas sépticas, pozos y limpieza de alcantarillado.</p>
+        <div class="card">
+            <div class="card-body">
+                <i class="fas fa-video" style="font-size: 2em; color: var(--accent-blue);"></i>
+                <h3>Inspección con Cámara TV</h3>
+                <p>Diagnóstico preciso de roturas o atascos mediante cámaras robotizadas, evitando obras innecesarias y costes extras.</p>
+            </div>
         </div>
-        <div class="service-card">
-            <i class="fas fa-video"></i>
-            <h3>Inspección con Cámara</h3>
-            <p>Localización exacta de averías y atascos complejos mediante cámaras de alta definición.</p>
+        <div class="card">
+            <div class="card-body">
+                <i class="fas fa-house-damage" style="font-size: 2em; color: var(--accent-blue);"></i>
+                <h3>Saneamiento de Arquetas</h3>
+                <p>Localización y limpieza profunda de arquetas ocultas, bajantes generales y redes de alcantarillado.</p>
+            </div>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <p><strong>Central de Servicios Técnicos de Desatascos</strong><br>
-        Equipos de guardia operativos 24h / 365 días al año.<br>
-        Atención Profesional Inmediata.</p>
-        <div class="footer-line">
-            &copy; 2026 Todos los derechos reservados.
+        <div class="footer-grid">
+            <div>
+                <h3 style="color: white;">Central de Desatascos y Urgencias</h3>
+                <p>Somos una red de técnicos especialistas coordinados para ofrecer la respuesta más rápida en su zona. Disponemos de la maquinaria más avanzada del sector para garantizar resultados duraderos.</p>
+                <p><i class="fas fa-map-marker-alt"></i> Cobertura en toda la Provincia y alrededores.</p>
+            </div>
+            <div style="text-align: right;">
+                <h3 style="color: white;">Atención al Cliente</h3>
+                <p style="font-size: 1.5em; color: var(--red); font-weight: bold;">611 801 528</p>
+                <p>Lunes a Domingo - 24 Horas</p>
+            </div>
+        </div>
+        <div class="legal-notice">
+            &copy; 2026 Servicio Profesional de Desatascos. Todos los derechos reservados. | Las marcas y logos mostrados pertenecen a sus respectivos técnicos colaboradores.
         </div>
     </footer>
 
