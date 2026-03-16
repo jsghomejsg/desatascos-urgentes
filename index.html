@@ -5,25 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DESATASCOS 24H | Camión Cuba Urgente</title>
     <style>
-        body { font-family: sans-serif; margin: 0; padding: 0; text-align: center; background: #fff; color: #333; }
-        .emergency-bar { background: #d32f2f; color: #fff; padding: 12px; font-weight: bold; }
-        .container { padding: 40px 20px; max-width: 500px; margin: auto; }
-        .logo { font-size: 2.5em; font-weight: 900; color: #1a237e; margin-bottom: 10px; }
-        .badge { display: inline-block; background: #ffeb3b; color: #000; padding: 8px 20px; border-radius: 50px; font-weight: bold; margin-bottom: 20px; border: 2px solid #000; }
-        .desc { font-size: 1.2em; margin-bottom: 35px; color: #444; line-height: 1.4; }
-        .btn-ws { display: block; background: #25d366; color: white; text-decoration: none; font-size: 1.5em; font-weight: bold; padding: 22px; border-radius: 15px; }
+        :root { --blue: #1a237e; --red: #d32f2f; --green: #25d366; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; text-align: center; background: #f8f9fa; color: #333; }
+        
+        /* BARRA DE URGENCIA */
+        .emergency-bar { background: var(--red); color: #fff; padding: 10px; font-weight: bold; font-size: 0.85em; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .hero { background: white; padding: 40px 20px; border-bottom: 5px solid var(--blue); }
+        .logo { font-size: 2.2em; font-weight: 900; color: var(--blue); line-height: 1; margin: 15px 0; }
+        .badge { display: inline-block; background: #ffeb3b; color: #000; padding: 8px 15px; border-radius: 5px; font-weight: bold; font-size: 0.9em; border: 1px solid #000; }
+        
+        /* EL BOTÓN QUE PAGA LAS FACTURAS */
+        .btn-ws {
+            display: flex; align-items: center; justify-content: center;
+            background: var(--green); color: white; text-decoration: none;
+            font-size: 1.4em; font-weight: bold; padding: 20px;
+            border-radius: 12px; margin: 25px auto; max-width: 300px;
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0% {box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);} 70% {box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);} 100% {box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);} }
+
+        /* SECCIÓN DE CONFIANZA */
+        .trust-section { padding: 30px 20px; background: #fff; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; max-width: 400px; margin: 0 auto; }
+        .feature { background: #f1f3f9; padding: 15px; border-radius: 8px; font-size: 0.85em; font-weight: bold; color: var(--blue); }
+
+        footer { padding: 20px; font-size: 0.8em; color: #777; }
+        .city-tag { color: var(--red); font-weight: bold; }
     </style>
 </head>
 <body>
-    <div class="emergency-bar">⚠️ AVISO: TÉCNICOS DISPONIBLES</div>
-    <div class="container">
-        <div class="badge">🚛 SERVICIO DE CAMIÓN CUBA</div>
-        <div class="logo">DESATASCOS<br>URGENTES</div>
-        <p class="desc">Especialistas en <b>inundaciones y fosas</b>. Llegamos en 40 min.</p>
+
+    <div class="emergency-bar">⚠️ TÉCNICOS DISPONIBLES AHORA EN TU ZONA</div>
+
+    <div class="hero">
+        <div class="badge">🚛 SERVICIO OFICIAL CAMIÓN CUBA</div>
+        <div class="logo">DESATASCOS<br>URGENTES 24H</div>
+        <p>Expertos en inundaciones, tuberías y fosas sépticas.<br><b>Llegamos en menos de 40 min.</b></p>
         
         <a href="https://wa.me/34611801528?text=URGENTE:%20Necesito%20presupuesto%20para%20un%20desatasco%20en:%20" class="btn-ws">
-            PEDIR AYUDA YA
+            ✅ PEDIR AYUDA YA
         </a>
+        <p style="font-size: 0.8em; color: #666;">Presupuesto cerrado sin compromiso</p>
     </div>
+
+    <div class="trust-section">
+        <div class="grid">
+            <div class="feature">🚛 Camión Propio</div>
+            <div class="feature">⏱️ 24h / 365 días</div>
+            <div class="feature">💎 Garantía 100%</div>
+            <div class="feature">💰 El mejor precio</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Servicio Técnico de Desatascos Profesional<br>Atención rápida en <span class="city-tag">Toda la Provincia</span></p>
+    </footer>
+
 </body>
 </html>
